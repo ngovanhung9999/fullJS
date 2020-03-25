@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+.content {
+    margin: 20px auto;
+    width: 1000px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.content h2 strong {
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+#logo {
+    width: 250px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.content ul li {
+    display: inline;
+    margin: 0px 20px;
+}
+
+.content ul li a {
+    text-decoration: none;
+    width: 170px;
+    height: 50px;
+    border: 1px solid darkgrey;
+    background-color: darkcyan;
+    border-radius: 4px;
+    color: black;
+    display: inline-block;
+    line-height: 50px;
+}
