@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const pull = (arr, ...args) => {
+            let newArr = [];
+            const newArrArgs = Array.isArray(args[0]) ? args[0] : args;
+            newArr = arr.filter((value) => {
+                return !newArrArgs.includes(value);
+            });
+            return newArr.join(",");
+        };
+        let arra1 = ['a', 'b', 'c', 'a', 'b', 'c'];
+        console.log(pull(arra1, 'a', 'c'));
+        let arra2 = ['a', 'b', 'c', 'a', 'b', 'c'];
+        console.log(pull(arra2, 'b'));
+    </script>
+</body>
+
+</html>

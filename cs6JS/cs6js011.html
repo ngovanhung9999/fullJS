@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const random_hex_color_code = () => {
+            const hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+            let strHex = "#";
+            for (let i = 0; i < 6; i++) {
+                strHex += hexValues[Math.floor(Math.random() * hexValues.length)];
+            }
+            return strHex;
+        }
+        console.log(random_hex_color_code())
+    </script>
+</body>
+
+</html>
