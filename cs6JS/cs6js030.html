@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const without = (arr, ...args) => {
+            const newArgs = Array.isArray(args[0]) ? args[0] : args;
+            return arr.filter((value) => {
+                return !args.includes(value);
+            })
+        }
+        console.log(without([2, 1, 2, 3], 1, 2));
+        console.log(without([2, 1, 2, 3], 3));
+    </script>
+</body>
+
+</html>

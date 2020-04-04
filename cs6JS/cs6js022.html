@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const filter_Non_Unique = (arr) => {
+            return arr.filter((value) => {
+                return arr.indexOf(value) === arr.lastIndexOf(value)
+            })
+        }
+        console.log(filter_Non_Unique([1, 2, 2, 3, 4, 4, 5]));
+        console.log(filter_Non_Unique([1, 2, 3, 4]));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url(img/Best-Website-Background-Images1.jpg);
+    color: white;
+    max-width: 100%;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.content {
+    text-align: center;
+    height: 300px;
+    width: 100%;
+}
+
+.content h2 {
+    font-weight: normal;
+    margin: 30px 0px 30px 0px;
+}
+
+.para1,
+.para2 {
+    margin-bottom: 30px;
+}
+
+.content .para2 a {
+    display: inline-block;
+    background-color: darkcyan;
+    padding: 16px 14px;
+    width: 300px;
+    /*box-sizing: border-box;*/
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    text-shadow: 1px 1px 0px darkgray;
+}
+
+.content .para2 a:hover {
+    background-color: darkturquoise;
+}
