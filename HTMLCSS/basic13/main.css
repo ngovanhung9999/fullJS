@@ -1,0 +1,62 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #8f7979;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+    height: 0px;
+    line-height: 0px;
+    content: ".";
+    visibility: hidden;
+}
+
+.air,
+.link,
+.categories,
+.contact {
+    float: left;
+    margin-right: 20px;
+    height: 200px;
+    line-height: 24px;
+}
+
+.air {
+    width: 350px;
+}
+
+.link {
+    width: 250px;
+}
+
+.categories {
+    width: 250px;
+}
+
+.contact {
+    width: 250px;
+}
+
+h4 {
+    margin-bottom: 30px;
+}

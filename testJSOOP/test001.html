@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Person(firstName, lastName) {
+            let _firstName = firstName;
+            let _lastName = lastName;
+
+            this.getFirstName = function() {
+                return _firstName;
+            };
+            this.setFirstName = function(firstName) {
+                _firstName = firstName;
+            };
+            this.getLastName = function() {
+                return _lastName;
+            };
+            this.setLastName = function(lastName) {
+                _lastName = lastName;
+            };
+        }
+        Person.prototype.fullName = function() {
+            return this.getFirstName() + " " + this.getLastName();
+        }
+
+        function Student(firstName, lastName, id, classShool) {
+            Person.call(this, firstName, lastName);
+            let _id = id;
+            let _classShool = classShool;
+            this.getID = function() {
+                return _id;
+            };
+            this.setID = function(id) {
+                _id = id;
+            };
+            this.getClassShool = function() {
+                return _classShool;
+            };
+            this.setClassShool = function(classShool) {
+                _classShool = classShool;
+            };
+        }
+        Student.prototype = new Person();
+        Student.prototype.constructor = Student;
+        Student.prototype.fullName = function() {
+            return this.getFirstName() + " " + this.getLastName() + " " + this.getID();
+        }
+        const s1 = new Student("hung", "thang", "123", "18A");
+        console.log(s1.fullName());
+    </script>
+</body>
+
+</html>

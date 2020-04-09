@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const pad = (str, length, char = " ") => str.length > length ? str : str + char.repeat(length - str.length);
+        console.log(pad('cat', 8));
+        console.log(pad(String(42), 6, '0'))
+        console.log(pad('foobar', 3))
+    </script>
+</body>
+
+</html>

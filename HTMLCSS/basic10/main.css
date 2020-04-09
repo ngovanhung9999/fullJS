@@ -1,0 +1,39 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    max-width: 100%;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.content {
+    color: white;
+    background-image: url(../basic02/img/Best-Website-Background-Images1.jpg);
+    width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+    height: 200px;
+}
+
+.content ul li {
+    float: left;
+    width: 210px;
+    height: 150px;
+    margin-right: 10px;
+    margin-left: 26px;
+}
+
+.content ul li p {
+    margin: 10px;
+}
+
+.content ul li p i {
+    font-size: 45px;
+}

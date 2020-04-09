@@ -2,3 +2,74 @@
     padding: 0px;
     margin: 0px;
 }
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    color: #1c1b1b;
+    background-color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1b1b;
+    transition: 0.3s color;
+}
+
+a:hover {
+    color: #cc0000;
+}
+
+.content {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.content p {
+    text-align: center;
+    color: #b4b4b4;
+    margin-bottom: 30px;
+}
+
+.content ul li {
+    width: 200px;
+    height: 150px;
+    float: left;
+    margin-right: 25px;
+    margin-left: 25px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.content ul li a span {
+    font-weight: bold;
+}
+
+.content ul li a img {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 2px;
+}
+
+.content ul {
+    margin-bottom: 30px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0px;
+    line-height: 0px;
+    visibility: hidden;
+}
