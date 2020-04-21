@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const omit = (obj, arr) => Object.keys(obj).filter((value) => {
+            return !arr.includes(value);
+        }).reduce((acc, key) => {
+            acc[key] = obj[key]; //tao khoa va value
+            return acc; //tra ve doi tuong acc;
+        }, {}); //neu mang khong co phan tu thi tra ve obj rong
+        console.log(omit({
+            a: 1,
+            b: '2',
+            c: 3
+        }, ['b']));
+        console.log(omit({
+            a: 1,
+            b: 2,
+            c: 3
+        }, ['c']));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content"></div>
+    <script type="text/javascript">
+        (function() {
+            const content = document.getElementById("content");
+            for (let index = 0; index < 10; index++) {
+                let divNode = document.createElement("div");
+                divNode.appendChild(document.createTextNode(`div phan tu thu ${index}`));
+                if (index % 2 == 0) {
+                    divNode.style.backgroundColor = "red";
+                } else {
+                    divNode.style.backgroundColor = "green";
+                }
+                content.appendChild(divNode);
+            }
+        })();
+    </script>
+</body>
+
+</html>

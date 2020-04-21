@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="number" value="0" />
+        <input type="button" id="btn" value="Tim" />
+    </form>
+    <p id="res"></p>
+    <script type="text/javascript">
+        (function() {
+            const btn = document.getElementById("btn");
+            btn.addEventListener("click", function() {
+                let number = Number.parseInt(document.getElementById("number").value);
+                const res = document.getElementById("res").innerHTML = functionRes(number);
+            });
+        })();
+
+        function checkNumber(n) {
+            if (n <= 1) {
+                return false;
+            } else {
+                if (n == 2) {
+                    return true;
+                } else {
+                    for (let i = 2; i < n; i++) {
+                        if (n % i == 0) {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+        function functionRes(number) {
+            let text = "";
+            for (let i = 0; i < number; i++) {
+                if (checkNumber(i)) {
+                    text += i + "<br />";
+                }
+            }
+            return text;
+        }
+    </script>
+</body>
+
+</html>

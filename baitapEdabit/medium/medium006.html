@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const getBudgets = arr => {
+            let sum = 0;
+            arr.forEach(values => {
+                sum += values["budget"];
+            });
+            return sum;
+        };
+        console.log(getBudgets([{
+            name: "John",
+            age: 21,
+            budget: 23000
+        }, {
+            name: "Steve",
+            age: 32,
+            budget: 40000
+        }, {
+            name: "Martin",
+            age: 16,
+            budget: 2700
+        }]));
+    </script>
+</body>
+
+</html>

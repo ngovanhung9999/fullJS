@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Lẻ</div>
+    <div>Chẵn</div>
+    <div>Lẻ</div>
+    <div>Chẵn</div>
+    <div>Lẻ</div>
+    <div>Chẵn</div>
+    <div>Lẻ</div>
+    <div>Chẵn</div>
+    <div>Lẻ</div>
+    <div>Chẵn</div>
+    <div>Lẻ</div>
+    <button id="btn">Remove</button>
+    <script type="text/javascript">
+        (function() {
+            const btn = document.getElementById("btn");
+            btn.addEventListener('click', function() {
+                const listDiv = document.getElementsByTagName("div");
+                for (let i = 0; i < listDiv.length; i++) {
+                    if (listDiv[i].childNodes[0].nodeValue == "Chẵn") {
+                        listDiv[i].remove();
+                    }
+                }
+            });
+        })()
+    </script>
+</body>
+
+</html>

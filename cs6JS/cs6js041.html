@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const object_From_Pairs = (arr) => {
+            return arr.reduce((acc, value) => {
+                acc[value[0]] = value[1];
+                return acc;
+            }, {});
+        };
+        console.log(object_From_Pairs([
+            ['a', 1],
+            ['b', 2]
+        ]));
+        console.log(object_From_Pairs([
+            [1, 10],
+            [2, 20],
+            [3, 30]
+        ]));
+    </script>
+</body>
+
+</html>

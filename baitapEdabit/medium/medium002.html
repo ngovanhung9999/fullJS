@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function filterUnique(arr) {
+            return arr.filter(function(strValue) {
+                let arrStr = strValue.split('');
+                let anchor = true;
+                for (let i = 0; i < arrStr.length; i++) {
+                    if (strValue.indexOf(arrStr[i]) != strValue.lastIndexOf(arrStr[i])) {
+                        anchor = false;
+                        break;
+                    }
+                }
+                return anchor;
+            });
+        }
+    </script>
+</body>
+
+</html>
