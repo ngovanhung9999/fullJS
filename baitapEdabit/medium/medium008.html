@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //cach ngan gon
+        //const calculator = (m,o,n) => o+n === "/0" ? 'Cannot divide by 0!' : eval(m+o+n);
+        const calculator = (num1, operator, num2) => {
+            obj = {
+                "+": (a, b) => a + b,
+                "-": (a, b) => a - b,
+                "*": (a, b) => a * b,
+                "/": (a, b) => b !== 0 ? a / b : "Can't divide by 0!"
+            }
+            return obj[operator](num1, num2);
+        }
+        console.log(calculator(2, '/', 2));
+    </script>
+</body>
+
+</html>
