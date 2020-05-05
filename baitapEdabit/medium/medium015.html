@@ -9,10 +9,10 @@
 
 <body>
     <script type="text/javascript">
-        //sử dụng Closure trong function
-        const greetingMaker = salutation => name => `${salutation}, ${name}`;
-        const greeting = greetingMaker("Hello");
-        console.log(greeting("James"));
+        //const reverseAndNot = n => +([...''+n].reverse().join('') + n);
+        //đảo mảng
+        const reverseAndNot = i => parseInt(`${i}`.split("").reverse().join("") + i);
+        console.log(reverseAndNot(123456789));
     </script>
 </body>
 

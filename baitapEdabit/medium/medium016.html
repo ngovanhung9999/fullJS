@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //const catchZeroDivision = e => !isFinite(eval(e));
+        //tính mẫu số chia cho không
+        const catchZeroDivision = expr => expr.split("/")[1] === undefined ? false : eval(expr.split("/")[1].trim()) === 0 ? true : false;
+        console.log(catchZeroDivision("4 / (2 + 3 - 5)"));
+        console.log(catchZeroDivision("2 / 0"));
+        console.log(catchZeroDivision("2 * 5 - 3"));
+        console.log(catchZeroDivision("7 / ((7**2) - ((-7)**2))"));
+    </script>
+</body>
+
+</html>

@@ -9,10 +9,9 @@
 
 <body>
     <script type="text/javascript">
-        //sử dụng Closure trong function
-        const greetingMaker = salutation => name => `${salutation}, ${name}`;
-        const greeting = greetingMaker("Hello");
-        console.log(greeting("James"));
+        //tính true trong mảng
+        const countTrue = arr => arr.filter(value => value).length;
+        console.log(countTrue([true, true, false, true, false, false, false, false, true, false]));
     </script>
 </body>
 

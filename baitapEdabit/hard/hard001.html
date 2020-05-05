@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tính tổng các chử số của 1 so va cho ra chẳn le
+
+        /*
+                const oddishOrEvenish = n => eval([...n+''].join`+`) % 2
+          ? 'Oddish' : 'Evenish'
+                */
+        const oddishOrEvenish = number => eval(`${number}`.split("").reduce((total, value) => total += `+${value}`)) % 2 != 0 ? "Oddish" : "Evenish";
+        console.log(oddishOrEvenish(55551));
+    </script>
+</body>
+
+</html>

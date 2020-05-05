@@ -11,6 +11,7 @@
     <script>
         function filterUnique(arr) {
             return arr.filter(function(strValue) {
+                //xem 1 mảng có phải là có phần tử trùng không
                 let arrStr = strValue.split('');
                 let anchor = true;
                 for (let i = 0; i < arrStr.length; i++) {

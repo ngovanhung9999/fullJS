@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*
+                        const indexMultiplier = arr => {
+                            let sum = 0;
+                            for (let i = 0; i < arr.length; i++) {
+                                sum += i * arr[i];
+                            }
+                            return sum;
+                        }
+                    */
+        //giá trị nhân với chỉ số
+        const indexMultiplier = arr => arr.reduce((a, v, i) => a + v * i, 0);
+        console.log(indexMultiplier([9, 3, 7, -7]));
+    </script>
+</body>
+
+</html>

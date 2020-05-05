@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script type="text/javascript">
-    /*
-    const sevenBoom = function(arr) {
-	    return (arr.join().includes('7') ? "Boom!" : "there is no 7 in the array");
-    }
-    */
-        const sevenBoom=arr=> /7/.test(arr.toString()) ? "Boom!":"there is no 7 in the array";
+        /*
+                    const sevenBoom = function(arr) {
+                	    return (arr.join().includes('7') ? "Boom!" : "there is no 7 in the array");
+                    }
+                    */
+        //kiểm tra trong mảng có số  7 hay không
+        const sevenBoom = arr => /7/.test(arr.toString()) ? "Boom!" : "there is no 7 in the array";
         console.log(sevenBoom([2, 6, 7, 9, 3]));
     </script>
 </body>
+
 </html>

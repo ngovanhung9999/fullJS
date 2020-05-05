@@ -8,15 +8,21 @@
 </head>
 
 <body>
+
     <script type="text/javascript">
-        //gôm nhiều mảng về 1 mảng
-        const concat = (...args) => {
-            return args.reduce((total, value) => {
-                return total.concat(value);
-            });
+        //callback
+        function anotherFunc(callback) {
+            let str = "bye"
+            setTimeout(() => {
+                callback(str);
+            }, 100)
         }
 
-        console.log(concat([1, 2, 3], [4, 5], [6, 7]));
+        var doc = "hello"
+
+        function callback(str) {
+            doc = str
+        }
     </script>
 </body>
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*
+                                function testJackpot(result) {
+                        	return new Set(result).size === 1
+                        }
+                                */
+
+        //kiểm tra các các phần tử trong mảng có bằng nhau không
+        const testJackpot = result => {
+            let x = result[0];
+            return result.every(value => value === x);
+        }
+        console.log(testJackpot([':(', ':)', ':|', ':|']));
+        console.log(testJackpot(['abc', 'abc', 'abc', 'abc']));
+    </script>
+</body>
+
+</html>

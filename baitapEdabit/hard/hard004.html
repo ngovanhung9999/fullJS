@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //const removeLeadingTrailing = n => ''+(+n);
+        /*
+        function removeLeadingTrailing(n) {
+	        n = n.replace(/^0*(?!\.)/g, ""); //removes any leading 0s before a decimal point
+	        if (n.includes(".")) { //replaces any final 0s if there is no decimal point
+		    n = n.replace(/0+$/g, "");
+	    }
+	    n = n.replace(/\.$/g, ""); //removes any leftover decimal place
+	    if (n == "") return "0";
+	        return n;
+        }
+        */
+
+
+        //loại bỏ các số 0 dư thừa
+        const removeLeadingTrailing = n => `${parseFloat(n)}`;
+        console.log(removeLeadingTrailing("230.000"));
+        console.log(removeLeadingTrailing("03.1400"));
+        console.log(removeLeadingTrailing("00402"));
+    </script>
+</body>
+
+</html>

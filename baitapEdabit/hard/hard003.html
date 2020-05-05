@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*
+                                const sumMissingNumbers = a => {
+                        	let tot = 0;
+                        	for (let i = Math.min(...a) + 1, j = Math.max(...a); i < j; i++)
+                        		if (!a.includes(i)) tot += i;
+                        	return tot;
+                        }
+                                
+                                */
+
+        const sumMissingNumbers = arr => {
+            //tính tổng các phần tử không có trong mảng với max min tìm trong mảng
+            let sum = 0;
+            arr.sort((a, b) => a - b);
+            for (let i = arr[0]; i <= arr[arr.length - 1]; i++) {
+                if (arr.includes(i)) {
+                    continue;
+                }
+                sum += i;
+            }
+            return sum;
+        }
+        console.log(sumMissingNumbers([99, 2, 45, 4, 17]));
+    </script>
+</body>
+
+</html>
