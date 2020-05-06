@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*
+                 function rgbToHex(col) {
+        	return `#${col.match(/\d+/g).map(v => (+v).toString(16).padStart(2, "0")).join("")}`;
+        }*/
+        const rgbToHex = col => {
+            return "#" + col.replace(/[rgb() ]/gi, "").split(",").map(value => {
+                return Number(value).toString(16).length < 2 ? "0" + Number(value).toString(16) : Number(value).toString(16);
+            }).join("");
+        }
+        console.log(rgbToHex("rgb(0, 192, 192)"));
+    </script>
+</body>
+
+</html>
