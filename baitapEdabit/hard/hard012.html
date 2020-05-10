@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function insertWhitespace1(s) {
+            return s.split('').map(x => x.toUpperCase() == x ? ` ${x}` : x).join('').trim();
+        }
+        //-------------------
+        function insertWhitespace2(s) {
+            return s.replace(/([a-z])([A-Z])/g, "$1 $2");
+        }
+        const insertWhitespace1 = s => s.replace(/[A-Z]/g, ' $&').trim();
+        //-------------------
+        //tách các từ có chữ cái in hoa
+        const insertWhitespace = s => s.split("").map((value, index, arr) => {
+            if (/[A-Z]/.test(value)) {
+                return arr[index] = " " + value;
+            } else {
+                return value;
+            }
+        }).join("").trim();
+        console.log(insertWhitespace("TheGreatestUpsetInHistory"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //só sanh số âm và số dương của mảng
+        const isPositiveDominant = arr => (new Set(arr.filter(value => value < 0))).size < (new Set(arr.filter(value => value > 0))).size;
+        console.log(isPositiveDominant([5, 4, 3, 0, 0, -1, -1, -2, -2]));
+    </script>
+</body>
+
+</html>
