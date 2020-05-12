@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //đảo những từ có ký tự bắc đầu bằng var c
+        const specialReverse = (s, c) => s.split(" ").map(value => value[0] == c ? value.split("").reverse().join("") : value).join(" ");
+        console.log(specialReverse('word searches are super fun', 's'));
+    </script>
+</body>
+
+</html>

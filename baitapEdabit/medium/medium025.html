@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //xóa những phần tử có trong chars cho chuỗi str 
+        //const stripSentence = (s,c) => s.replace(RegExp(`[${c}]`,'g'), '')
+        //const stripSentence = (str, lst) => {
+        //    return [...str].filter(chr => !lst.includes(chr)).join("");
+        //}
+        const stripSentence = (str, chars) => {
+            let newArr = str.split("");
+            chars.split("").forEach(value => newArr = newArr.filter((x => x != value)));
+            return newArr.join("");
+        };
+        console.log(stripSentence("the quick brown fox jumps over the lazy dog", "aeiou"));
+    </script>
+</body>
+
+</html>

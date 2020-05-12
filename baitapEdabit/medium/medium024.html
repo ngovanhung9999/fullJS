@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //chuyển chuổi số thành mãng số nguyên với k=1000
+        /*
+        function transformUpvotes(str) {
+	return str.split(' ')
+		.map(a => (a.endsWith("k") ? parseFloat(a) * 1000 : parseInt(a)));
+}
+        */
+        const transformUpvotes = str => str.split(" ").map(value => {
+            return value.endsWith("k") ? parseFloat(value.substring(0, (value.length - 1))) * 1000 : parseFloat(value);
+        });
+        console.log(transformUpvotes('20.3k 3.8k 7.7k 992'));
+    </script>
+</body>
+
+</html>
