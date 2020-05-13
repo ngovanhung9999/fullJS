@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tìm thứ tự của mã phập lục phân
+        /*const firstIndex = (hex, needle) =>
+  hex
+    .split(' ')
+    .map(str => String.fromCharCode(parseInt(str, 16)))
+    .join('')
+    .indexOf(needle);
+        */
+        const firstIndex = (hex, needle) => hex.split(" ").indexOf(needle[0].charCodeAt().toString(16));
+        console.log(firstIndex("68 65 6c 6c 6f 20 77 6f 72 6c 64", "world"));
+    </script>
+</body>
+
+</html>

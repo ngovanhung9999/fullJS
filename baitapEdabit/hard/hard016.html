@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //lấy những ký tự không có trong chuỗi str2
+        /*function findBrokenKeys(str1, str2) {
+	return [...new Set([...str1].filter((val, i) => val !== str2[i]))]
+}
+        */
+        const findBrokenKeys = (str1, str2) => {
+            const arr = str1.split("").filter((value, index) => value != str2[index]);
+            const obj = {};
+            arr.forEach(value => {
+                obj[value] = 0;
+            });
+            return Object.keys(obj);
+        };
+        console.log(findBrokenKeys("beethoven", "affthoif5"));
+    </script>
+</body>
+
+</html>
