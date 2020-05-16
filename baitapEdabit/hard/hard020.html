@@ -9,7 +9,6 @@
 
 <body>
     <script type="text/javascript">
-<<<<<<< HEAD
         //const isPandigital = num =>/0+1+2+3+4+5+6+7+8+9+/.test(String(num).split('').sort().join(''));
         const isPandigital1 = num => (new Set(num.toString().split(""))).size === 10;
         const isPandigital = num => {
@@ -22,22 +21,6 @@
         };
         console.log(isPandigital(84847473937));
         console.log(isPandigital(6781235184590));
-=======
-        //lấy những ký tự không có trong chuỗi str2
-        /*function findBrokenKeys(str1, str2) {
-	return [...new Set([...str1].filter((val, i) => val !== str2[i]))]
-}
-        */
-        const findBrokenKeys = (str1, str2) => {
-            const arr = str1.split("").filter((value, index) => value != str2[index]);
-            const obj = {};
-            arr.forEach(value => {
-                obj[value] = 0;
-            });
-            return Object.keys(obj);
-        };
-        console.log(findBrokenKeys("beethoven", "affthoif5"));
->>>>>>> a225e19e1fabb0cbb093ec64332d173aabc423d6
     </script>
 </body>
 
