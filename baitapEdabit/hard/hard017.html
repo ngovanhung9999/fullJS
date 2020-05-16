@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tính tổng giá các sản phẩm
+        //function getTotalPrice(groceries) {
+        //   return Number(groceries.reduce((acc, curr) => acc += curr.price * curr.quantity, 0).toFixed(2)); 
+        // }
+        const getTotalPrice = groceries => {
+            let sum = 0;
+            groceries.forEach(element => {
+                sum += element["price"] * element["quantity"];
+            });
+            return sum.toFixed(1);
+        };
+        console.log(getTotalPrice([{
+            product: "Milk",
+            quantity: 1,
+            price: 1.50
+        }, {
+            product: "Cereals",
+            quantity: 1,
+            price: 2.50
+        }]));
+        console.log(getTotalPrice([{
+            product: "Chocolate",
+            quantity: 1,
+            price: 0.10
+        }, {
+            product: "Lollipop",
+            quantity: 1,
+            price: 0.20
+        }]));
+    </script>
+</body>
+
+</html>

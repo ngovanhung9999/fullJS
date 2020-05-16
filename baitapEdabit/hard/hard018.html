@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //xem các phần tử trong mảng bigrams có nằm trong mảng words
+        //function canFind(bigrams, words) {
+        //  return bigrams.every(x=> words.some(y=> y.includes(x)))
+        //}
+        const canFind = (bigrams, words) => {
+            let str = words.toString();
+            return bigrams.every(value => {
+                return str.includes(value);
+            });
+        };
+        console.log(canFind(["at", "be", "th", "au"], ["beautiful", "the", "hat"]));
+    </script>
+</body>
+
+</html>

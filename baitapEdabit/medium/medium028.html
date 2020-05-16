@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const str1 = "Can read a spray chart and a balance sheet. 1 part Executive, 1 part entrepreneur, 2 parts geek and 3 parts baseball coach. Too many parts?"
+        const str2 = "Can read a spray chart and a balance sheet. 1 part Executive, 1 part entrepreneur, 2 parts geek and 3 parts baseball coach. Too many parts ?"
+        const str3 = "Can read a spray chart and a balance sheet. 1 part Executive, 1 part entrepreneur, 2 parts geek and 3 parts baseball coach. Too many parts  ?"
+
+        const validate = (REGEXP) => {
+            if (!/\\S/.test(String(REGEXP))) return () => "invalid"
+            return function testReg(str) {
+                return REGEXP.test(str)
+            }
+        }
+        const REGEXP = /\S\?/g;
+        const testExp = validate(REGEXP)
+    </script>
+</body>
+
+</html>

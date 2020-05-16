@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //const isPandigital = num =>/0+1+2+3+4+5+6+7+8+9+/.test(String(num).split('').sort().join(''));
+        const isPandigital1 = num => (new Set(num.toString().split(""))).size === 10;
+        const isPandigital = num => {
+            for (let i = 0; i < 10; i++) {
+                if (num.toString().split("").indexOf(`${i}`) === -1) {
+                    return false;
+                }
+            }
+            return true;
+        };
+        console.log(isPandigital(84847473937));
+        console.log(isPandigital(6781235184590));
+    </script>
+</body>
+
+</html>

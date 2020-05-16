@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tính tổng
+        //function diceGame(arr) {
+        //   return arr.every(e => e[0] != e[1]) ? arr.flat().reduce((a, b) => a + b, 0) : 0;
+        //}
+        //const diceGame = arr => arr.some(v => v[0]===v[1]) ? 0 :arr.flat().reduce((a,v) => a + v, 0);
+        const diceGame = arr => {
+            let anchor = false;
+            let sum = 0;
+            arr.forEach(value => {
+                if (value[0] == value[1]) anchor = true;
+                sum += value[0] + value[1];
+            });
+            return anchor == true ? 0 : sum;
+        };
+        console.log(diceGame([
+            [1, 1],
+            [5, 6],
+            [6, 4]
+        ]));
+        console.log(diceGame([
+            [1, 2],
+            [3, 4],
+            [5, 6]
+        ]));
+    </script>
+</body>
+
+</html>

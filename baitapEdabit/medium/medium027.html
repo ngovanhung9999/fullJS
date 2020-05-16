@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //gôm nhiều mảng về 1 mảng
+        //function flatten(arr) {		
+        //return [].concat(...arr)  
+        //}
+        function flatten(arr) {
+            let arr2 = [];
+            for (let i = 0; i < arr.length; i++) {
+                arr2 = arr2.concat(arr[i]);
+            }
+            return arr2;
+        }
+        console.log(flatten([
+            [1, 2],
+            [3, 4]
+        ]));
+        console.log(flatten([
+            ['a', 'b'],
+            ['c', 'd']
+        ]));
+    </script>
+</body>
+
+</html>

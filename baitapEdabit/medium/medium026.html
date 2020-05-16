@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //trả vể true nến có 1 sô lẻ và 1 số chăn
+        //const oneOddOneEven = n => ~~(n / 10) % 2 !== n % 2;
+        const oneOddOneEven = n => Math.floor((n / 10)) % 2 == 0 ? (n % 10) % 2 != 0 : (n % 10) % 2 == 0;
+        console.log(oneOddOneEven(21));
+        console.log(oneOddOneEven(22));
+    </script>
+</body>
+
+</html>
