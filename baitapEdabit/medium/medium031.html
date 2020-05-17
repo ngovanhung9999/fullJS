@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tách 1 number thành 1 mảng và đảo mảng
+        //const reverseArr = n => [...`${n}`].map(Number).reverse();
+        const reverseArr = num => `${num}`.split("").reverse().map(value => Number(value));
+        console.log(reverseArr(1485979));
+    </script>
+</body>
+
+</html>

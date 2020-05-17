@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tìm số mũ của a 
+        //const solveForExp = (a,b) =>Math.round(Math.log(b)/Math.log(a));
+        const solveForExp = (a, b) => {
+            let i = 0;
+            while (Math.pow(a, i) != b && Math.pow(a, i) <= b) {
+                i++;
+            }
+            return Math.pow(a, i) == b ? i : 0;
+        }
+        console.log(solveForExp(9, 3486784401));
+    </script>
+</body>
+
+</html>

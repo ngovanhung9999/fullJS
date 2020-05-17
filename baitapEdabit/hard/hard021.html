@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tìm sô lần lặp của 1 chuổi
+
+
+        const numberOfRepeats = str => {
+            let lengthSubstr = 0;
+            for (let i = 1; i < str.length; i++) {
+                if (i * 3 <= str.length) {
+                    let x = 3 * i - 3 * i;
+                    let y = 3 * i - 2 * i;
+                    let z = 3 * i - 1 * i;
+                    if (str.substr(x, i) === str.substr(y, i) && str.substr(x, i) === str.substr(z, i)) {
+                        lengthSubstr = i;
+                        break;
+                    }
+                } else if (i * 2 <= str.length) {
+                    let x = 3 * i - 3 * i;
+                    let y = 3 * i - 2 * i;
+                    if (str.substr(x, i) === str.substr(y, i)) {
+                        lengthSubstr = i;
+                        break;
+                    }
+                }
+            }
+            return lengthSubstr == 0 ? 1 : str.length / lengthSubstr;
+
+        };
+        console.log(numberOfRepeats("abcabcabc"));
+        console.log(numberOfRepeats("LV123LV123"));
+        console.log(numberOfRepeats("llbllbllbllbllbllb"));
+        console.log(numberOfRepeats("kcsdf"));
+    </script>
+</body>
+
+</html>
