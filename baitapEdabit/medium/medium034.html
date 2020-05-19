@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tính số ngày chênh lệch của join chạy được
+        const progressDays = runs => {
+            let days = 0;
+            for (let i = 0; i < runs.length - 1; i++) {
+                if (runs[i] < runs[i + 1]) {
+                    days++
+                }
+            }
+            return days;
+        };
+        console.log(progressDays([10, 11, 12, 9, 10]));
+    </script>
+</body>
+
+</html>

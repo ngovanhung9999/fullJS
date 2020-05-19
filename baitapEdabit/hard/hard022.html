@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //trả về 1 obj tìm số làm xuất hiện của các phần tử trong mảng
+        const getFrequencies = arr => arr.reduce((total, value) => {
+            if (total.hasOwnProperty(value)) {
+                total[value] += 1;
+            } else {
+                total[value] = 1;
+            }
+            return total;
+        }, {});
+        console.log(getFrequencies(['A', 'B', 'A', 'A', 'A']));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tìm số  gần nhất của n
+        /*
+        const nearestElement = (n, arr) => {
+            const dist = arr.map(el => Math.abs(el - n));
+            const min = Math.min(...dist);
+            const num = Math.max(...arr.filter((_, i) => dist[i] === min));
+            return arr.indexOf(num);
+        }
+        */
+        const nearestElement = (n, arr) => {
+            let x = arr[0];
+            let min = Math.abs(arr[0] - n);
+            for (let i = 0; i < arr.length; i++) {
+                if (min >= Math.abs(arr[i] - n)) {
+                    if (min == Math.abs(arr[i] - n)) {
+                        if (x < arr[i]) {
+                            x = arr[i];
+                        }
+                    } else {
+                        x = arr[i];
+                    }
+                    min = Math.abs(arr[i] - n);
+                }
+            }
+            return arr.indexOf(x);
+        };
+
+        console.log(nearestElement(1, [0, -2, 3, 2, -1]));
+        console.log(nearestElement(-50, [13, 86, -49, -51, 8, 0]));
+        console.log(nearestElement(10, [1, 100, 1000]));
+        console.log(nearestElement(-20, [-50, -10, -30]));
+    </script>
+</body>
+
+</html>
