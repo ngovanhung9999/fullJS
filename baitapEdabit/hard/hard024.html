@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //thay thế các key băng value 
+        const encrypt = word => {
+            let obj = {
+                a: 0,
+                e: 1,
+                o: 2,
+                u: 3
+            }
+            for (const key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    word = word.replace(new RegExp(key, "g"), obj[key]);
+                }
+            }
+            return `${[...word].reverse().join("")}aca`;
+        };
+        console.log(encrypt("karaca"));
+    </script>
+</body>
+
+</html>

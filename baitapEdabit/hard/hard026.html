@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const averageDate = dates => {
+            if (dates.length == 0) {
+                return null;
+            }
+            let d = new Date();
+            d.setTime(dates.reduce((total, value) => total += value.getTime(), 0) / (dates.length))
+            return d.toISOString();
+        };
+        console.log(averageDate([
+            new Date(Date.UTC(2010, 12, 30)),
+            new Date(Date.UTC(2006, 12, 1)),
+            new Date(Date.UTC(2006, 11, 4)),
+            new Date(Date.UTC(2003, 4, 21)),
+        ]));
+        console.log(averageDate([]));
+    </script>
+</body>
+
+</html>
