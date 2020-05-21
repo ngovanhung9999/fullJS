@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tìm số nguyên tố
+        const primesBelowNum = n => {
+            let arr = [];
+            for (let i = 2; i <= n; i++) {
+                if (check(i)) {
+                    arr.push(i);
+                }
+            }
+            return arr;
+        };
+        const check = number => {
+            if (number <= 1) {
+                return false;
+            } else {
+                if (number == 2) {
+                    return true;
+                } else {
+                    for (let i = 2; i < number; i++) {
+                        if (number % i == 0) {
+                            return false
+                        }
+                    }
+                }
+            }
+            return true;
+        };
+        console.log(primesBelowNum(20));
+    </script>
+</body>
+
+</html>

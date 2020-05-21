@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //const textToNum = phone => {
+        //    let lttrs = ["ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUW", "XYZ"]
+        //    return phone.replace(/[A-Z]/g, (match, i) =>
+        //        lttrs.indexOf(lttrs.find(e => e.includes(match))) + 2)
+        //}
+        const textToNum = phone => {
+            const arr = ["none", "none", /[ABC]/g, /[DEF]/g, /[GHI]/g, /[JKL]/g, /[MNO]/g, /[PQRS]/g, /[TUV]/g, /[WXYZ]/g];
+            for (let i = 2; i < arr.length; i++) {
+                phone = phone.replace(arr[i], i);
+            }
+            return phone;
+        };
+        console.log(textToNum("123-647-EYES"));
+    </script>
+</body>
+
+</html>
