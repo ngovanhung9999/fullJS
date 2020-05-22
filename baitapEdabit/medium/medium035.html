@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const multiplyNums = nums => nums.split(",").reduce((total, value) => total *= Number(value.trim()), 1);
+        console.log(multiplyNums("1, 2, 3, 4"));
+    </script>
+</body>
+
+</html>
