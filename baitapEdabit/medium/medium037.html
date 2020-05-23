@@ -9,9 +9,8 @@
 
 <body>
     <script type="text/javascript">
-        //tính tổng của chuổi số truyền vào
-        const multiplyNums = nums => nums.split(",").reduce((total, value) => total *= Number(value.trim()), 1);
-        console.log(multiplyNums("1, 2, 3, 4"));
+        const rev = n => `${Math.abs(n)}`.split("").reverse().join("");
+        console.log(rev(-764));
     </script>
 </body>
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //kiểm tra ngày nhập vào có phải là ngày hợp lệ không
+        const isValidDate = (d, m, y) => {
+            try {
+                return (new Date(`${y}-${m}-${d}`)).toISOString();
+            } catch (error) {
+                return false;
+            }
+        };
+        console.log(isValidDate(2, 22, 2020));
+        console.log(isValidDate(31, 2, 2010));
+    </script>
+
+</body>
+
+</html>

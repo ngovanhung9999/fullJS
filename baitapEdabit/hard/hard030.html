@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tìm nút được tạo nên từ hình ngũ giác
+        const pentagonal = num => {
+            let sum = 1;
+            for (let index = 1; index < num; index++) {
+                sum += index * 5;
+            }
+            return sum;
+        };
+        console.log(pentagonal(8));
+        console.log(pentagonal(10));
+    </script>
+</body>
+
+</html>
