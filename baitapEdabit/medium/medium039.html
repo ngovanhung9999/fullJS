@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //const removeDups = arr => [...new Set(arr)]
+        //lọc những phần tử trùng trong mảng
+        const removeDups = arr => Object.keys(arr.reduce((total, value) => {
+            total[value] = 0;
+            return total;
+        }, {})).map(value => {
+            if (!isNaN(value)) {
+                return Number(value);
+            } else {
+                return value;
+            }
+        });
+        console.log(removeDups(['John', 'Taylor', 'John']));
+        console.log(removeDups([1, 2, 2, 2, 3, 2, 5, 2, 6, 6, 3, 7, 1, 2, 5]));
+    </script>
+</body>
+
+</html>

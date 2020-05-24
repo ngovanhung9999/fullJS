@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //kiểm tra chuổi nhập vào
+        //const alphanumericRestriction = s =>/^[a-zA-Z]+$/g.test(s) || /^[\d]+$/.test(s);
+        const alphanumericRestriction = str => {
+            if (str == "") {
+                return false;
+            }
+            if (!isNaN(str)) {
+                return true;
+            }
+            if (str.replace(/[a-z]/gi, "").length == 0) {
+                return true;
+            }
+            return false;
+        };
+        console.log(alphanumericRestriction("only letters right"));
+        console.log(alphanumericRestriction("H3LL0"));
+        console.log(alphanumericRestriction("123454321"));
+        console.log(alphanumericRestriction(""));
+    </script>
+</body>
+
+</html>
