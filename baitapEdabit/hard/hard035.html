@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tìm phần tử xuất hiện 3 lần trong mảng
+        const isFullHouse = hand => {
+            let x = hand.reduce((total, value) => {
+                if (total.hasOwnProperty(value)) {
+                    total[value] += 1;
+                } else {
+                    total[value] = 1;
+                }
+                return total;
+            }, {});
+            for (const key in x) {
+                if (x.hasOwnProperty(key)) {
+                    if (x[key] == 3) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+        console.log(isFullHouse(['A', 'A', 'A', 'K', 'K']));
+    </script>
+</body>
+
+</html>

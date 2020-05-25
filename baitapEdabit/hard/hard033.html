@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //chuyển c1 thanh c2 và ngược lại
+        /*
+        const doubleSwap = (str, a, b) =>
+            str.replace(new RegExp(`([${a}])|[${b}]`, 'g'), (match, g1) =>
+            match === g1 ? b : a
+        );
+        */
+        const doubleSwap = (str, c1, c2) => str.split("").map(value => {
+            if (value == c1) {
+                return c2;
+            } else if (value == c2) {
+                return c1;
+            } else {
+                return value;
+            }
+        }).join("");
+        console.log(doubleSwap("aabbccc", "a", "b"));
+    </script>
+</body>
+
+</html>

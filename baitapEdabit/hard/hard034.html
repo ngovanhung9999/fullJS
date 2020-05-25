@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //viết chữ hoa và chữ thường
+        /*function alternatingCaps(str) {
+            let upper = false
+            return [...str].map(c => {
+                if (c === ' ') return ' '
+                upper = !upper
+                return upper ? c.toUpperCase() : c.toLowerCase()
+            }).join('')
+        }
+        */
+        const alternatingCaps = str => {
+            let i = 0;
+            return str.split("").map(value => {
+
+                if (value == " ") {
+                    return value;
+                } else {
+                    if (i % 2 == 0) {
+                        i++;
+                        return value.toUpperCase();
+                    } else {
+                        i++;
+                        return value.toLowerCase();
+                    }
+                }
+            }).join("");
+        };
+        console.log(alternatingCaps("What is your name?"));
+    </script>
+</body>
+
+</html>

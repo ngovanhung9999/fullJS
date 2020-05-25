@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //tìm max của array notes trả về cho topNote
+        /*
+        const getStudentsWithNamesAndTopNotes = students =>
+            students.map(student => ({
+             name: student.name,
+            topNote: Math.max(...student.notes, 0),
+        }));*/
+        const getStudentsWithNamesAndTopNotes = students => students.map(value => {
+            value["topNote"] = value["notes"].length > 0 ? eval(`Math.max(${value["notes"].toString()})`) : 0;
+            delete value["notes"];
+            return value;
+        });
+    </script>
+</body>
+
+</html>
