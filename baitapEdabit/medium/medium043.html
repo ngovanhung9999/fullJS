@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const XO = str => {
+            let lengthX = 0;
+            let lengthO = 0;
+
+            if (str.match(/[x]/ig) != null) {
+                lengthX = str.match(/x/ig).length;
+            }
+            if (str.match(/[o]/ig) != null) {
+                lengthO = str.match(/o/ig).length;
+            }
+            return lengthO == lengthX;
+        };
+        console.log(XO("xooxx"));
+        console.log(XO("zpzpzpp"));
+    </script>
+</body>
+
+</html>
