@@ -9,14 +9,8 @@
 
 <body>
     <script type="text/javascript">
-        //kiểm tra xem n có phải là số nguyên không và có nằm giữa lower và upper
-        const intWithinBounds = (n, lower, upper) => {
-            if (Number.isInteger(n)) {
-                return n >= lower && n < upper;
-            }
-            return false;
-        }
-        console.log(intWithinBounds(10, 9, 11));
+        const capMe = arr => arr.map(value => value[0].toUpperCase() + value.slice(1).toLowerCase());
+        console.log(capMe(['mavis', 'senaida', 'lEtty']));
     </script>
 </body>
 

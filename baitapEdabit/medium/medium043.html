@@ -9,27 +9,20 @@
 
 <body>
     <script type="text/javascript">
-        //sửa lại số điện thoại nhập vào 
-        const createPhoneNumber = arr => '(xxx) xxx-xxxx'.replace(/x/g, v => arr.shift());
-        const createPhoneNumber = numbers => numbers.join("").replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
-        const createPhoneNumber = numbers => {
-            if (numbers.length == 10) {
-                return numbers.map((value, index) => {
-                    if (index == 0) {
-                        return "(" + value;
-                    }
-                    if (index == 2) {
-                        return value + ") "
-                    }
-                    if (index == 5) {
-                        return value + "-"
-                    }
-                    return value;
-                }).join("");
+        const XO = str => {
+            let lengthX = 0;
+            let lengthO = 0;
+
+            if (str.match(/[x]/ig) != null) {
+                lengthX = str.match(/x/ig).length;
             }
-            return "not"
+            if (str.match(/[o]/ig) != null) {
+                lengthO = str.match(/o/ig).length;
+            }
+            return lengthO == lengthX;
         };
-        console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+        console.log(XO("xooxx"));
+        console.log(XO("zpzpzpp"));
     </script>
 </body>
 
