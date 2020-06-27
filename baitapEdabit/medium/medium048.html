@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //phan tu sau mang chia het cho phan tu dau mang
+        const factorChain = arr => arr.slice(1).every((num, i) => num % arr[i] === 0);
+        //
+        const factorChain = arr => {
+            let x = true;
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (arr[i + 1] % arr[i] != 0) {
+                    x = false;
+                    break;
+                }
+            }
+            return x;
+        };
+        console.log(factorChain([1, 2, 4, 8, 16, 32]));
+        console.log(factorChain([2, 4, 6, 7, 12]));
+    </script>
+</body>
+
+</html>

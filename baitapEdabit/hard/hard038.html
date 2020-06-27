@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //trả về 1 đối tượng có key là các từ và value là số lần suất hiện của ký tự
+        const findOccurrences = (str, char) => {
+            return str.split(" ").reduce((total, value) => {
+                total[value.toLowerCase()] = value.replace(new RegExp(`[^${char}]`, "gi"), "").length;
+                return total;
+            }, {});
+        };
+        console.log(findOccurrences("Hello World", "o"));
+        console.log(findOccurrences("Create a nice JUICY function", "c"));
+        console.log(findOccurrences("An APPLE a day keeps an Archeologist AWAY...", "a"));
+    </script>
+</body>
+
+</html>
