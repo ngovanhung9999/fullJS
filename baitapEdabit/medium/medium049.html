@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //bình phương của mỗi chữ số
+        function squareDigits(n) {
+            return +[...String(n)].map(x => x * x).join('');
+        }
+        const squareDigits = n => {
+            return Number(`${n}`.split("").map(value => {
+                return Number(value) ** 2;
+            }).join(""));
+        };
+        console.log(squareDigits(9119));
+    </script>
+</body>
+
+</html>

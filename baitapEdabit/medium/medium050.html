@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tính tổng của 1 mảng
+        function sumArray(arr) {
+            return arr.flat(Infinity).reduce((a, c) => a + c);
+        }
+        const sumArray = arr => eval(arr.toString().replace(/,/g, "+"));
+        console.log(sumArray([1, [1, 2],
+            [3, 1]
+        ]));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tính biểu thức nếu chia cho 0 thì trả về 1
+        function arithmeticOperation(n) {
+            const [num1, operator, num2] = n.split(' ');
+            const operations = {
+                '+': +num1 + +num2,
+                '-': +num1 - num2,
+                '*': +num1 * num2,
+                '/': +num2 === 0 ? -1 : +num1 / num2
+            };
+            return operations[operator];
+        }
+
+        const arithmeticOperation = n => {
+            if (eval(n) === Infinity) {
+                return -1;
+            } else {
+                return eval(n);
+            }
+        };
+        console.log(arithmeticOperation("15 / 0"));
+    </script>
+</body>
+
+</html>
