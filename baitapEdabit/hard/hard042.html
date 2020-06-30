@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tìm loại nhạc
+        const uniqueStyles = albums => new Set(albums.flatMap(x => x.split(','))).size
+            //
+        const uniqueStyles = albums => new Set(albums.toString().split(",")).size;
+        console.log(uniqueStyles([
+            "Dub,Dancehall",
+            "Industrial,Heavy Metal",
+            "Techno,Dubstep",
+            "Synth-pop,Euro-Disco",
+            "Industrial,Techno,Minimal"
+        ]));
+    </script>
+</body>
+
+</html>

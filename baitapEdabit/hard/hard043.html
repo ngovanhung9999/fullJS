@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const roundNumber = (num, n) => {
+            let i = num;
+            let j = num;
+            while (true) {
+                if (i % n == 0) {
+                    j = 0;
+                    break;
+                }
+                if (j % n == 0) {
+                    i = 0;
+                    break;
+                }
+                i++;
+                j--;
+            }
+            return i == 0 ? j : i;
+        };
+        console.log(roundNumber(34, 25));
+        console.log(roundNumber(65, 10));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //sửa lại chuổi hoán vị i và i+1
+        const unmix = str => str.replace(/(.)(.)?/g, '$2$1');
+        const unmix = str => [...str].reduce((a, c, i, s) => (i % 2) ? a : a + `${s[i + 1] || ''}` + c, '');
+        //
+        const unmix = str => {
+            let l = 0;
+            let arr = [...str];
+            if (str.length % 2 == 0) {
+                l = str.length;
+            } else {
+                l = str.length - 1;
+            }
+            for (let i = 0; i < l; i += 2) {
+                let temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+            return arr.join("");
+        };
+        console.log(unmix('hTsii  s aimex dpus rtni.g'));
+    </script>
+</body>
+
+</html>

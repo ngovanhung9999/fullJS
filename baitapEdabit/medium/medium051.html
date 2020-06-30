@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //thay thế các key thành value của đối tượng 
+        function replaceVowel(word) {
+            return word.replace(/[aeiou]/g, v => "aeiou".indexOf(v) + 1)
+        }
+        //
+        const replaceVowel = word => {
+            const obj = {
+                "a": 1,
+                "e": 2,
+                "i": 3,
+                "o": 4,
+                "u": 5
+            }
+            return word.split("").map((value) => {
+                if (obj.hasOwnProperty(value)) {
+                    return obj[value];
+                }
+                return value;
+            }).join("");
+        };
+        console.log(replaceVowel("karachi"));
+    </script>
+</body>
+
+</html>
