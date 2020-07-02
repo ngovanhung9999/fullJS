@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //thay các ký tự * trong str thành các ký tự trong vowels
+        const uncensor = (str, vowels) => {
+            let i = 0;
+            return [...str].map(value => {
+                let x = "";
+                if (value == "*") {
+                    x = vowels[i];
+                    i++;
+                } else {
+                    x = value;
+                }
+                return x;
+            }).join("");
+        };
+        console.log(uncensor('Wh*r* d*d my v*w*ls g*?', 'eeioeo'));
+    </script>
+</body>
+
+</html>

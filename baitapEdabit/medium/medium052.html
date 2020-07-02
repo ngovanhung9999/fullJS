@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tổng các chữ số của 1 số chẵn hay lẽ
+        function factorGroup(num) {
+            return eval([...
+                    `${num}`
+                ].join("+")) //% 2 == 0 ? "even" : "odd";
+        }
+        console.log(factorGroup(7));
+    </script>
+</body>
+
+</html>

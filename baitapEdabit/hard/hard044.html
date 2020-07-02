@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tìm số phần tử trùng
+        const countIdenticalArrays = (...arr) =>
+            (a = 5 - (new Set(arr.map(x => x.join ``)).size), a) < 2 ? 0 : a;
+
+        function countIdenticalArrays(arr1, arr2, arr3, arr4) {
+            const arr = [];
+            for (let i = 0; i < arguments.length; i++) {
+                //arr.push(arguments[i].sort((a, b) => a - b).toString());
+                arr.push(arguments[i].toString());
+            }
+            return 4 - new Set(arr).size == 0 ? 0 : 4 - new Set(arr).size + 1;
+        };
+        console.log(countIdenticalArrays([0, 0, 0], [0, 1, 2], [0, 0, 0], [2, 1, 0]));
+    </script>
+</body>
+
+</html>
