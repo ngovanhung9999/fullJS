@@ -11,6 +11,10 @@
     <script>
         //thay các ký tự * trong str thành các ký tự trong vowels
         const uncensor = (str, vowels) => {
+            const arr = vowels.split('');
+            return str.replace(/\*/g, () => arr.shift());
+        };
+        const uncensor = (str, vowels) => {
             let i = 0;
             return [...str].map(value => {
                 let x = "";

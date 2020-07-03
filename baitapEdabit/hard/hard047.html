@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tìm số phần tử kiểu [1,2,1] 
+        const countBoomerangs = arr =>
+            arr.slice(2).reduce((total, last, i) => {
+                const [first, middle] = [arr[i], arr[i + 1]];
+                return total + Number(first === last && first !== middle);
+            }, 0);
+        //
+        const countBoomerangs = arr => {
+            let array = [];
+            for (let i = 0; i < arr.length - 2; i++) {
+                if (arr[i] == arr[i + 2] && arr[i + 1] != arr[i]) {
+                    array.push(arr.slice(i, i + 3));
+                }
+            }
+            return array.length;
+        };
+        console.log(countBoomerangs([9, 5, 9, 5, 1, 1, 1]));
+    </script>
+</body>
+
+</html>

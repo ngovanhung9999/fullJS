@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //cộng các tham số , rồi lấy chử số tổng của tham số nhân với nhau
+        let prod = n => n < 10 ? n : prod(+String(n).split('').reduce((a, b) => a * b));
+        let sumDigProd = (...arr) => prod(arr.reduce((a, b) => a + b));
+        //
+        const sumDigProd = (...arg) => {
+            let sum = eval(arg.join("+"));
+            while (sum >= 10) {
+                sum = eval([...
+                    `${sum}`
+                ].join("*"));
+            }
+            return sum;
+        };
+        console.log(sumDigProd(16, 28));
+    </script>
+</body>
+
+</html>

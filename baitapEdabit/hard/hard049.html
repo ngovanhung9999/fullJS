@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //số âm số dương xen kẻ nhâu gặp 0 là false
+        const alternatePosNeg = arr =>
+            arr.every((e, i) => e && (!i || Math.sign(e) !== Math.sign(arr[i - 1])));
+
+        function alternatePosNeg(arr) {
+            if (arr.includes(0)) {
+                return false
+            }
+            return arr.slice(1)
+                .every((v, i) => (v > 0 && arr[i] < 0) || (v < 0 && arr[i] > 0))
+        }
+        //
+        const alternatePosNeg = arr => {
+            if (arr.includes(0)) return false;
+            if (arr[0] > 0) {
+                return arr.every((value, index) => {
+                    if (index % 2 == 0) {
+                        return value > 0;
+                    } else {
+                        return value < 0
+                    }
+
+                });
+            } else {
+                return arr.every((value, index) => {
+                    if (index % 2 == 0) {
+                        return value < 0;
+                    } else {
+                        return value > 0
+                    }
+                });
+            }
+        };
+        console.log(alternatePosNeg([3, -2, 5, -5, 2, -8]));
+    </script>
+</body>
+
+</html>
