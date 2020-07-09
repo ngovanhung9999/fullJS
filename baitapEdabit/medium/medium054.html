@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tính trung bình các chữ số
+        function mean(num) {
+            let s = String(Math.abs(num)).split('');
+            return s.reduce((x, y) => x + Number(y), 0) / s.length;
+        }
+        //
+        const mean = num => {
+            return eval(`${num}`.split("").join("+")) / `${num}`.length;
+        };
+        console.log(mean(789));
+    </script>
+</body>
+
+</html>
