@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tính tổng mảng thời gian
+        function timeSum(times) {
+            let sec = 0;
+            if (times.length > 0) {
+                sec = times.reduce((a, e) => a + Date.parse("01 Jan 1970 " + e), 0) / 1000
+            }
+            return [Math.floor(sec / 3600), Math.floor(sec / 60) % 60, sec % 60]
+        }
+        //
+        const timeSum = times =>
+            times.reduce((total, value) => {
+                value = value.split(":");
+                total[0] += Number(value[0]);
+                total[1] += Number(value[1]);
+                total[2] += Number(value[2]);
+                if (total[1] >= 60) {
+                    total[0]++;
+                    total[1] -= 60;
+                }
+                if (total[2] >= 60) {
+                    total[1]++;
+                    total[2] -= 60;
+                }
+                return total;
+            }, [0, 0, 0]);
+        console.log(timeSum(['1:03:45', '1:23:50']));
+    </script>
+</body>
+
+</html>

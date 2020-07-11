@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // chử cái đầu tiên viết hoa còn lại viết thường
+        const camelCasing = string => {
+            return string.split(/[ _]/g).map((w, i) => (!i ?
+                w.toLowerCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()
+            )).join("");
+        }
+        const camelCasing = str => str.toLowerCase().replace(/[\s_](.)/g, (_, m) => m.toUpperCase());
+        //
+        const camelCasing = str => {
+            str = str.replace(/_/g, " ").split(" ").map((value, index) => {
+                return value.charAt(0).toUpperCase() + value.substring(1).toLowerCase();
+            }).join("");
+            return str.charAt(0).toLowerCase() + str.substring(1)
+        }
+        console.log(camelCasing("low high_HIGH"));
+    </script>
+</body>
+
+</html>

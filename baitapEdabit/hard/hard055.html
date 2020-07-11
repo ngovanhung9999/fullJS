@@ -11,8 +11,12 @@
     <script>
         //sắp xếp mảng tăng đần
         const sortByAnswer = arr => {
-            return arr.sort(function(eval(a), ));
-        };
+                const re = s => s.replace("x", "*");
+                return arr.sort((a, b) => eval(re(a)) - eval(re(b)));
+            }
+            //
+        const sortByAnswer = arr =>
+            arr.map(value => value.replace(/x/gi, "*")).sort((a, b) => eval(a) - eval(b)).map(value => value.replace(/\*/gi, "x"));
         console.log(sortByAnswer(["1 + 1", "1 + 7", "1 + 5", "1 + 4"]));
         console.log(sortByAnswer(["2 + 2", "2 - 2", "2 x 2", "2 / 2"]));
     </script>
