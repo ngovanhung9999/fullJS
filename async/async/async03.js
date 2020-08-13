@@ -30,15 +30,18 @@ let divide = (res) => {
         }, 0);
     })
 };
-
-
-let tinh = (a, b, h) => {
-    return add(a, b).
-    then(res => multiply(res, h)).
-    then(res => divide(res));
+//sua dung async await voi nhieu object promise va tra ve promise
+let tinh = async(a, b, h) => {
+    try {
+        let ab = await add(a, b);
+        let abh = await multiply(ab, h);
+        let res = await divide(abh);
+        return Promise.resolve(res);
+    } catch (error) {
+        return Promise.reject(error);
+    }
 };
 
-tinh(6, 4, "5").
+tinh(4, 5, 6).
 then(res => { console.log(res) }).
-catch(err => { console.log(err + "") });
-console.log("hung");
+catch(err => { console.log(err) })
