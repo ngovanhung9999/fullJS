@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // sap xep cac chu cai chu hoa xep truoc
+        const capToFront1 = s => [...s].sort().join("");
+        //chu hoa du len truoc
+        const capToFront = s => {
+            const arr = [
+                [],
+                []
+            ];
+            [...s].forEach(value => {
+                /[A-Z]/.test(value) ? arr[0].push(value) : arr[1].push(value);
+            });
+            return arr[0].concat(arr[1]).join("");
+        };
+
+        console.log(capToFront("hApPy"));
+        console.log(capToFront("moveMENT"));
+
+        function capToFront2(s) {
+            return s.match(/[A-Z]/g).join('') + s.match(/[a-z]/g).join('');
+        }
+    </script>
+</body>
+
+</html>

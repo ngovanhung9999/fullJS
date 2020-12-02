@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //nếu mọi chỉ mục chẵn chứa một số chẵn và mọi chỉ mục lẻ chứa một số lẻ
+
+        const isSpecialArray = a => a.every((v, i) => v % 2 == i % 2);
+        //
+        const isSpecialArray = arr => {
+            return arr.every((value, index) => {
+                if (index % 2 == 0) {
+                    return value % 2 != 0 ? false : true
+                } else {
+                    return value % 2 != 1 ? false : true
+                }
+            });
+        };
+        console.log(isSpecialArray([2, 7, 5, 9, 6, 1, 6, 3]));
+    </script>
+</body>
+
+</html>

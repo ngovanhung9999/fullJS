@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tim vi thi cua chu Nemo
+        Nemo
+        //
+        const findNemo = sentence => {
+            let num = sentence.split(" ").indexOf("Nemo") + 1;
+            return num == 0 ? `I can't find Nemo :(` : `I found Nemo at ${num}!`;
+        };
+        console.log(findNemo("I am finding Nemo !"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tinh tong cac phan thu theo duong cheo
+        const trace = arr => arr.reduce((a, e, i) => a + e[i], 0);
+        //
+        const trace = arr => {
+            let a = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (i == j) a.push(arr[i][j]);
+                }
+            }
+            return eval(a.join("+"));
+        };
+        console.log(trace(
+            [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+            ]
+        ))
+    </script>
+</body>
+
+</html>

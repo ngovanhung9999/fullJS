@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Rectangle {
+            constructor(w, h) {
+                this.w = w;
+                this.h = h;
+            }
+        }
+
+        Rectangle.prototype.area = function() {
+            return this.h * this.w;
+        }
+
+        class Square extends Rectangle {
+            constructor(a) {
+                super(a, a)
+            }
+        }
+        const rec = new Rectangle(3, 4);
+        const sqr = new Square(3);
+
+        console.log(rec.area());
+        console.log(sqr.area());
+    </script>
+</body>
+
+</html>
