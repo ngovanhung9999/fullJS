@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // tim cac string khong trung
+        const filterUnique = arr => arr.filter(value => {
+            return new Set([...value]).size == value.length;
+        });
+        console.log(filterUnique(['abcd','abc','abbc','defg']));
+    </script>
+</body>
+
+</html>

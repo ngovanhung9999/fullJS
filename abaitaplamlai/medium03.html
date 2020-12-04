@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const changeTypes = array => {
+            array.forEach((value, index, arr) => {
+                if (toString.call(value) == "[object Number]") {
+                    arr[index] = value % 2 == 0 ? value + 1 : value;
+                }
+
+                if (toString.call(value) == "[object String]") {
+                    arr[index] = value[0].toUpperCase() + value.slice(1) + "!"
+                }
+
+                if (toString.call(value) == "[object Boolean]") {
+                    arr[index] = value == true ? false:true;
+                }
+            });
+            return array;
+        };
+        console.log(changeTypes(["a", 12, true]));
+        console.log(changeTypes([13, "13", "12", "twelve"]));
+        console.log(changeTypes([false, "false", "true"]));
+    </script>
+</body>
+
+</html>

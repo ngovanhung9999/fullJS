@@ -8,13 +8,10 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-        //gôm nhiều mảng về 1 mảng
-        const concat = (...args) => {
-            return args.reduce((total, value) => {
-                return total.concat(value);
-            });
-        }
+    <script>
+        const concat = (...args) => args.reduce((total, value) => {
+            return total.concat(value);
+        }, []);
         console.log(concat([1, 2, 3], [4, 5], [6, 7]));
     </script>
 </body>
