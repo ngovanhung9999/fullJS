@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var collection = {
+            2548: {
+                albumTitle: 'Slippery When Wet',
+                artist: 'Bon Jovi',
+                tracks: ['Let It Rock', 'You Give Love a Bad Name']
+            },
+            2468: {
+                albumTitle: '1999',
+                artist: 'Prince',
+                tracks: ['1999', 'Little Red Corvette']
+            },
+            1245: {
+                artist: 'Robert Palmer',
+                tracks: []
+            },
+            5439: {
+                albumTitle: 'ABBA Gold'
+            }
+        };
+
+        function updateRecords(object, id, prop, value) {
+
+            if (value != '') {
+                if (prop == 'artist' || prop == 'albumTitle') {
+                    object[id][prop] = value;
+                }
+
+                if (prop == 'tracks') {
+                    if (object[id][prop]) {
+                        object[id][prop].push(value);
+                    } else {
+                        object[id][prop] = [];
+                        object[id][prop].push(value);
+                    }
+                }
+            } else {
+                delete object[id][prop];
+            }
+            Math.floor()
+            return object;
+        }
+        console.log(getMousePosition("a", "b"));
+    </script>
+</body>
+
+</html>

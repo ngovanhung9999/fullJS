@@ -3,19 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
     <script>
-        //const toArray = obj => Object.keys(obj).map(value => [value, obj[value]]);
-        const toArray = obj => Object.entries(obj);
+        //const toArray = obj => Object.entries(obj);
         console.log(toArray({
             foo: 33,
             bar: 45,
             baz: 67
         }));
+        undefined
+        unfefined
+
+        function toArray(obj) {
+            return Object.keys(obj).map(value => [value, obj[value]]);
+        }
     </script>
 </body>
 
